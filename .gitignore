@@ -1,0 +1,25 @@
+# Simulation outputs
+*.vcd
+*.log
+*.out
+
+# Build artifacts
+*.json
+*.rpt
+*.vg
+*.lef
+*.def
+*.gds
+*.mag
+*.spice
+*.sdf
+*.asc
+
+# Environment / backup
+*.bak
+*~
+__pycache__/
+*.pyc
+
+# PDK
+#pdk/
