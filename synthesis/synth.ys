@@ -1,0 +1,20 @@
+# Read all RTL files
+# read_verilog ../rtl/ips/IP/rtl/*.v
+# read_verilog ../rtl/ips/modules/rtl/*.v
+read_verilog ../rtl/*.v
+
+# Define top module (replace with your top)
+hierarchy -check -top top_module
+
+# Run synthesis passes
+proc; opt; fsm; opt; memory; opt;
+
+# Map to generic cells or a specific standard cell library
+# (For generic gate count, use the built-in "techmap" and "abc" for logic optimization)
+techmap; opt; abc -liberty your_lib.lib; opt;
+
+# Print statistics (includes gate count, LUT count, etc)
+stat
+
+# Write synthesized netlist for backend or inspection
+write_verilog synth_out.v

@@ -1,0 +1,10 @@
+#submodules:
+#  - name: my-lib
+#    url: https://github.com/example/my-lib.git
+#    path: external/my-lib
+#    ref: v1.2.3     # can be a tag or a branch
+#
+#  - name: another-lib
+#    url: https://github.com/example/another-lib.git
+#    path: external/another-lib
+#    ref: main       # branch name
